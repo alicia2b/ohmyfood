@@ -1,0 +1,72 @@
+@mixin header{
+    display: flex;
+      img{ 
+                flex:1;
+               object-fit: contain;
+            height: 50px;
+    }
+}
+ 
+h3{
+    margin: 0;
+    margin-left: 10px;
+    font-weight: bold;
+    padding-top: 10px;}
+
+@mixin bouton_decouverte{
+    color:white;
+    font-weight: bold;
+    border: 1px solid #9356DC;
+    width: 200px;
+    margin-top: 30px;
+    border-radius: 20px;
+    background: linear-gradient(0deg,#9356DC 10%, #FF79DA 95%);
+}
+@mixin boutons{
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: rgb(240, 235, 235);
+    border: 1px solid rgb(240, 235, 235); 
+    border-radius: 20px;
+    margin-bottom: 20px;
+    height: 60px; 
+}
+@mixin boutons_bouton {
+    align-items: center; 
+    display: flex;
+    padding: 0;
+    background-color: #ded9e3;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    height: 35px;
+}
+@mixin bouton_commander {
+    @include bouton_decouverte;
+}
+@mixin footer_mobile{
+        background-color: black;
+        color: white;
+        padding-left: 10px;
+   
+    div{
+            color:rgb(228, 220, 220);
+            display: flex;
+            margin-left: 5px;
+            align-items: baseline;
+
+         a{
+                color:rgb(228, 220, 220);
+                margin: 0;
+                margin-left: 5px;
+                text-decoration: none;
+                display: block;
+        
+        i{
+            opacity: 1;
+            color: white;
+        }
+    }
+    }
+        }
+        
