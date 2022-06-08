@@ -1,0 +1,429 @@
+h3 {
+  margin-left: 10px;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+/*@media (max-width:700px) {*/
+header {
+  background-color: #dbd3d3;
+  height: 320px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#loading {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  z-index: 6;
+  opacity: 0.9;
+  position: fixed;
+  -webkit-animation: loading 3s 0s linear forwards;
+          animation: loading 3s 0s linear forwards;
+}
+
+#loading i {
+  z-index: 3;
+  font-size: 120px;
+  color: #99E2D0;
+  -webkit-animation: spinner 2.2s 0s linear forwards;
+          animation: spinner 2.2s 0s linear forwards;
+}
+
+@-webkit-keyframes loading {
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes loading {
+  100% {
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes spinner {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+body > img {
+  height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+
+.location {
+  color: black;
+  height: 30px;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #c4bdbd;
+  padding-top: 5px;
+  width: 100%;
+}
+
+.location i {
+  padding: 0 10px;
+}
+
+h1 {
+  width: 80%;
+  text-align: center;
+  margin: 10px 25px;
+}
+
+h1 + p {
+  margin: 10px 15px;
+  width: 90%;
+  text-align: center;
+  font: 28px;
+  color: #b8b3b3;
+}
+
+h2 {
+  padding: 0px 20px;
+  padding-top: 30px;
+}
+
+#recherche {
+  color: white;
+  font-weight: bold;
+  border: 1px solid #9356DC;
+  width: 200px;
+  border-radius: 20px;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, #9356DC), color-stop(95%, #FF79DA));
+  background: linear-gradient(0deg, #9356DC 10%, #FF79DA 95%);
+}
+
+button {
+  width: 100%;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #f0ebeb;
+  border: 1px solid #f0ebeb;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  height: 60px;
+}
+
+.bouton {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  background-color: #ded9e3;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  height: 35px;
+}
+
+span {
+  width: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 50%;
+  background-color: #9356DC;
+  color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bouton p {
+  text-align: center;
+}
+
+.restaurants {
+  width: 100%;
+  background-color: #f0ebeb;
+  padding-bottom: 60px;
+}
+
+.restau {
+  background-color: white;
+  width: 95%;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+
+.description + p {
+  margin-left: 10px;
+}
+
+.bouton i {
+  margin-right: 10px;
+}
+
+/* carte*/
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.restau {
+  position: relative;
+  border-radius: 20px;
+}
+
+.restau b {
+  position: absolute;
+  background-color: #99E2D0;
+  color: #098b6b;
+  font-weight: bold;
+  width: 60px;
+  height: 20px;
+  top: 20px;
+  right: 10px;
+}
+
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 180px;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  -o-object-position: 0% 60%;
+     object-position: 0% 60%;
+}
+
+.description {
+  font-weight: bold;
+  margin: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 92%;
+}
+
+.restau p {
+  width: 100%;
+  margin-top: 0;
+  padding: 0;
+}
+
+.coeurs {
+  font-size: 20px;
+  background-clip: text;
+}
+
+.coeurs .fas {
+  margin-left: -20px;
+  position: absolute;
+  opacity: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.coeurs .fas:hover {
+  opacity: 1;
+}
+
+.far:hover {
+  opacity: 0;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding-left: 10px;
+}
+
+footer div {
+  color: #e4dcdc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 5px;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+footer div a {
+  color: #e4dcdc;
+  margin: 0;
+  margin-left: 5px;
+  text-decoration: none;
+  display: block;
+}
+
+footer div a i {
+  opacity: 1;
+  color: white;
+}
+
+@media screen and (min-width: 700px) and (max-width: 1024px) {
+  header {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  h1 + p {
+    font-size: 22px;
+    margin-bottom: 35px;
+  }
+  .boutons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .bouton {
+    width: 50%;
+    margin: 20px 200px;
+    margin-bottom: 20px;
+  }
+  h2 {
+    padding: 20px 0;
+    text-align: center;
+  }
+  .restaurants {
+    width: 80%;
+    margin-left: 80px;
+  }
+  .restaurants img {
+    padding: 0 0;
+    height: 240px;
+    width: 100%;
+    -o-object-position: 20% 60%;
+       object-position: 20% 60%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  h3 {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    padding: 0 50px;
+    margin: 0;
+  }
+  body > img {
+    height: 80px;
+  }
+  .location {
+    font-size: 20px;
+  }
+  #recherche {
+    margin-top: 40px;
+    width: 300px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  .boutons {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    width: 100%;
+  }
+  .bouton {
+    margin: 0 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 20px;
+  }
+  img {
+    height: 350px;
+    -o-object-position: 0% 65%;
+       object-position: 0% 65%;
+  }
+  span {
+    font-size: 24px;
+  }
+  span + p {
+    font-size: 24px;
+  }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  footer h3 {
+    font-size: 24px;
+    margin-left: 0;
+  }
+}
+/*# sourceMappingURL=accueil.css.map */
