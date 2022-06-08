@@ -1,4 +1,5 @@
 h3 {
+  margin: 0;
   margin-left: 10px;
   font-weight: bold;
   padding-top: 10px;
@@ -24,6 +25,8 @@ header + img {
   -o-object-fit: cover;
      object-fit: cover;
   height: 240px;
+  -o-object-position: 0 80%;
+     object-position: 0 80%;
 }
 
 body {
@@ -72,7 +75,15 @@ h2 {
   width: 40px;
 }
 
+.entree {
+  width: 97%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 .carte {
+  width: 97%;
   background: white;
   border-radius: 10px;
   display: -webkit-box;
@@ -241,14 +252,25 @@ b {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  cursor: pointer;
   color: white;
   font-weight: bold;
   border: 1px solid #9356DC;
   width: 200px;
   margin-top: 30px;
   border-radius: 20px;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, #9356DC), color-stop(95%, #FF79DA));
-  background: linear-gradient(0deg, #9356DC 10%, #FF79DA 95%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+}
+
+#commander:hover {
+  -webkit-filter: sepia(40%);
+          filter: sepia(40%);
+  box-shadow: 18px 4px 34px 6px rgba(166, 158, 158, 0.75);
+  -webkit-box-shadow: 18px 4px 34px 6px rgba(166, 158, 158, 0.75);
+  -moz-box-shadow: 18px 4px 34px 6px rgba(166, 158, 158, 0.75);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 footer {
@@ -263,17 +285,19 @@ footer div {
   display: -ms-flexbox;
   display: flex;
   margin-left: 5px;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
 }
 
 footer div a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #e4dcdc;
   margin: 0;
   margin-left: 5px;
   text-decoration: none;
-  display: block;
 }
 
 footer div a i {
@@ -283,23 +307,7 @@ footer div a i {
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   body {
-    margin: 0 40px;
-  }
-  header {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    height: auto;
-    width: 70%;
-  }
-  header img {
-    -o-object-fit: contain;
-       object-fit: contain;
-    height: 50px;
-  }
-  header + img {
-    -o-object-position: 0 60%;
-       object-position: 0 60%;
+    margin: 0 50px;
   }
   footer {
     display: -webkit-box;
@@ -316,22 +324,10 @@ footer div a i {
 
 @media screen and (min-width: 1024px) {
   body {
-    margin: 0px 50px;
-  }
-  header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    width: 80%;
+    margin: 0 50px;
   }
   header img {
-    -o-object-fit: contain;
-       object-fit: contain;
-    height: 80px;
-    width: 80%;
+    height: 100px;
   }
   header + img {
     width: 100%;
@@ -367,6 +363,13 @@ footer div a i {
   #commander {
     width: 300px;
     height: 60px;
+    -webkit-filter: sepia(40%);
+            filter: sepia(40%);
+    box-shadow: 18px 4px 34px 6px rgba(166, 158, 158, 0.75);
+    -webkit-box-shadow: 18px 4px 34px 6px rgba(166, 158, 158, 0.75);
+    -moz-box-shadow: 18px 4px 34px 6px rgba(166, 158, 158, 0.75);
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
   }
   footer {
     display: -webkit-box;

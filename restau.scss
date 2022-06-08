@@ -8,6 +8,7 @@ header+img {
     width: 100%;
     object-fit: cover;
     height: 240px;
+    object-position: 0 80%;
 }
 
    body{
@@ -42,8 +43,15 @@ h2{
     border-bottom: 2px solid #99E2D0 ;
     width: 40px;
 }
+.entree{
+    width: 97%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
 
 .carte{
+    width:97%;
     background: white;
     border-radius: 10px;
     display: flex;
@@ -58,14 +66,10 @@ main div{
     animation: presentation 0.8s linear backwards;
 }
 .plat{
-   
     animation: presentation 0.8s 0.8s  linear backwards;
-
 }
 .dessert{
-   
     animation: presentation 0.8s 1.5s linear backwards;
-
 }
 @keyframes presentation {
     from{transform:translateY(-10px);
@@ -156,6 +160,9 @@ b{
     margin-bottom: 40px;
     align-self: center;
     @include bouton_commander;
+    &:hover{
+        @include bouton_hover;
+    }
 }
 
 
@@ -166,48 +173,26 @@ footer{
 
 @media screen and (min-width:768px)and (max-width:1024px){
     body{
-        margin:0 40px;
+       @include body_tab_desk;
     }
-        header{
-    justify-content: space-between;
-    height: auto;
-    width: 70%;
-}
-    
-
-                header img{
-                    object-fit: contain;
-                     height: 50px;
-                    
-                }
+      
                 header+img{
                     
-                    object-position: 0 60%;
+                    
                 }
                 footer{
-                    display: flex;
-                    justify-content: space-evenly;
-                    align-items: baseline;
+                    @include footer_tablette_desk;
                 }
             
             }
  @media screen and (min-width:1024px){
      body{
-        margin: 0px 50px;
+     @include body_tab_desk;
      }
-            header{
-                display: flex;
-            justify-content: space-between;
-                    width: 80%;
-                }
-            
-                header img{
-                    object-fit: contain;
-                    height: 80px;
-                    width: 80%;
                 
-                }
-            
+    header img{
+        height: 100px;
+    }         
             header+img{
                         width: 100%;
                 object-fit: cover;
@@ -242,14 +227,12 @@ footer{
             #commander{
                 width: 300px;
                 height: 60px;
+                @include bouton_hover;
             }
             footer{
-                display: flex;
-                justify-content: space-evenly;
-                align-items: baseline;
-            }
-            footer a{
+                @include footer_tablette_desk;
+             a{
                 font-size: 22px;
             }
-
+        }
             }
