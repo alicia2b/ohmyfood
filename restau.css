@@ -236,6 +236,8 @@ b {
 }
 
 #commander {
+  height: 50px;
+  margin-bottom: 40px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -243,9 +245,8 @@ b {
   font-weight: bold;
   border: 1px solid #9356DC;
   width: 200px;
-  height: 50px;
+  margin-top: 30px;
   border-radius: 20px;
-  margin-bottom: 40px;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, #9356DC), color-stop(95%, #FF79DA));
   background: linear-gradient(0deg, #9356DC 10%, #FF79DA 95%);
 }

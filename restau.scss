@@ -1,17 +1,15 @@
-header{ 
-    display: flex;
 
- img{ 
-            object-fit: contain;
-         height: 50px;
-    }
+@import 'mixin.scss';
+
+header{
+    @include header;
+}
+header+img {
+    width: 100%;
+    object-fit: cover;
+    height: 240px;
 }
 
-    header+img {
-        width: 100%;
-        object-fit: cover;
-        height: 240px;
-    }
    body{
        animation:transition 1s 4s linear forwards;
    } 
@@ -47,10 +45,13 @@ h2{
 
 .carte{
     background: white;
+    border-radius: 10px;
+    display: flex;
+    margin-bottom: 20px;
+   
 }
 main div{
-    position: relative;
-    border-radius: 10px;
+    
     width: 97%;
 }
 .entree{
@@ -73,12 +74,7 @@ main div{
         transform: translateY(0);
     }
 }
-.carte{
-    display: flex;
-    margin-bottom: 20px;
-    z-index: 2;
 
-}
 .check{
     display: flex;
     width: 20px;
@@ -86,8 +82,8 @@ main div{
     justify-content: center;
     background-color: #99E2D0;
     opacity: 0;
-    z-index: 0;
-    position: inherit;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
   
 }
 .check i{
@@ -100,6 +96,7 @@ main div{
 .carte:hover{
     .check{
         animation: slide 0.5s linear forwards;
+       
     }
     .check>i{
         animation: rotation 0.5s linear forwards;
@@ -112,9 +109,11 @@ main div{
        
     }
     100%{
-       z-index: 3;
+      
        width: 180px;
        opacity: 1;
+       
+     
     }
 }
 @keyframes rotation {
@@ -151,44 +150,20 @@ p{
 b{
     color: black;
 }
+
 #commander{
-    align-self: center;
-    color:white;
-    font-weight: bold;
-    border: 1px solid #9356DC;
-    width: 200px;
     height: 50px;
-    border-radius: 20px;
     margin-bottom: 40px;
-    background: linear-gradient(0deg,#9356DC 10%, #FF79DA 95%);
- 
+    align-self: center;
+    @include bouton_commander;
 }
+
+
 footer{
-    background-color: black;
-    color: white;
-    padding-left: 10px;
-}
-h3{
-    margin-left: 10px;
-    font-weight: bold;
-    padding-top: 10px;
+    
+    @include footer_mobile;
 }
 
-footer  a{
-    color:rgb(228, 220, 220);
-    margin: 0;
-    margin-left: 5px;
-    text-decoration: none;
-    display: block;
-}
-
-footer div{
-    color:rgb(228, 220, 220);
-    display: flex;
-    margin-left: 5px;
-    align-items: baseline;
-    line-height: 25px;
-}
 @media screen and (min-width:768px)and (max-width:1024px){
     body{
         margin:0 40px;
