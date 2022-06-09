@@ -24,7 +24,7 @@ h3{
     width: 200px;
     margin-top: 30px;
     border-radius: 20px;
-    background: linear-gradient( #FF79DA, #9356DC);
+  background: linear-gradient( #FF79DA, #9356DC);
     
 }
 @mixin boutons{
@@ -65,12 +65,13 @@ filter:sepia(40%);
     width: 80%;
     height: auto;
 }
+/* coeurs + animation*/
 @mixin coeurs{
-        font-size: 20px;
+        font-size: 22px;
         }
 
        @mixin coeur_solid{
-            margin-left: -20px;
+            margin-left: -22px;
             position: absolute;
             opacity: 0;
             background-image: linear-gradient(#FF79DA,#9356DC);
@@ -78,9 +79,10 @@ filter:sepia(40%);
             -webkit-background-clip: text;
             color:transparent ;
             &:hover{
-                opacity: 1 ;
-    }
-}
+                animation: remplissage 1s linear forwards;
+               
+                    }
+                }
 
 @mixin coeur_regular {
     font-size: 20px;
@@ -88,17 +90,31 @@ filter:sepia(40%);
     opacity: 0;
 }
 }
-
+@keyframes remplissage {
+    to{
+        opacity: 1 ;
+        transform-origin: bottom;
+    }
+}
+/* */
 @mixin bouton_commander {
     @include bouton_colore;
 }
+/* Footer */
 @mixin footer_mobile{
-        background-color: black;
-        color: white;
+        background-color:black ;
         padding-left: 10px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 10px;
+      img{
+        filter: invert(1);
+        width: 100px;
    
-    div{
+    footer div{
             color:rgb(228, 220, 220);
+            align-items: baseline;
             display: flex;
             margin-left: 5px;
          a{
@@ -116,6 +132,7 @@ filter:sepia(40%);
         }
     }
     }
+}
   }
    @mixin footer_tablette_desk {
     display: flex;

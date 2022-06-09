@@ -52,33 +52,34 @@ h2{
     border-bottom: 2px solid #99E2D0 ;
     width: 40px;
 }
-.entree{
-    width: 97%;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+main div{
+    width: 100%;
 }
-
 .carte{
     width:97%;
     background: white;
     border-radius: 10px;
     display: flex;
     margin-bottom: 20px;
-   
-}
-main div{
-    
-    width: 97%;
+    box-shadow: 5px 5px 5px 1px rgba(161,143,143,0.75);
+-webkit-box-shadow: 5px 5px 5px 1px rgba(161,143,143,0.75);
+-moz-box-shadow: 5px 5px  5px 1px rgba(161,143,143,0.75);
 }
 .entree{
-    animation: presentation 0.8s linear backwards;
+    padding: 10px 0;
+   
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    animation: presentation 0.8s linear forwards;
 }
 .plat{
-    animation: presentation 0.8s 0.8s  linear backwards;
+    padding: 10px 0;
+    animation: presentation 0.8s 0.8s  linear forwards;
 }
 .dessert{
-    animation: presentation 0.8s 1.5s linear backwards;
+    padding: 10px 0;
+    animation: presentation 0.8s 1.5s linear forwards;
 }
 @keyframes presentation {
     from{transform:translateY(-10px);
@@ -125,8 +126,6 @@ main div{
       
        width: 180px;
        opacity: 1;
-       
-     
     }
 }
 @keyframes rotation {
@@ -140,12 +139,11 @@ main div{
 
 
 span{
-    line-height: 30px;
     margin-left: 10px;
     font-weight: bold;
     font-size: 15px;
-    display: flex;
-    justify-content: space-between;
+  
+    
 }
 p{
     justify-content: space-between;
@@ -184,11 +182,7 @@ footer{
     body{
        @include body_tab_desk;
     }
-      
-                header+img{
-                    
-                    
-                }
+    
                 footer{
                     @include footer_tablette_desk;
                 }

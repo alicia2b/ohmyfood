@@ -5,6 +5,24 @@ h3 {
   padding-top: 10px;
 }
 
+/* coeurs + animation*/
+@-webkit-keyframes remplissage {
+  to {
+    opacity: 1;
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+  }
+}
+@keyframes remplissage {
+  to {
+    opacity: 1;
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+  }
+}
+
+/* */
+/* Footer */
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -66,13 +84,13 @@ h1 {
 }
 
 .coeurs {
-  font-size: 20px;
+  font-size: 22px;
   display: -webkit-box;
   -webkit-box-align: center;
 }
 
 .coeurs .fas {
-  margin-left: -20px;
+  margin-left: -22px;
   position: absolute;
   opacity: 0;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
@@ -83,7 +101,8 @@ h1 {
 }
 
 .coeurs .fas:hover {
-  opacity: 1;
+  -webkit-animation: remplissage 1s linear forwards;
+          animation: remplissage 1s linear forwards;
 }
 
 .coeurs .fas .far {
@@ -100,11 +119,8 @@ h2 {
   width: 40px;
 }
 
-.entree {
-  width: 97%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+main div {
+  width: 100%;
 }
 
 .carte {
@@ -115,25 +131,30 @@ h2 {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 20px;
-}
-
-main div {
-  width: 97%;
+  box-shadow: 5px 5px 5px 1px rgba(161, 143, 143, 0.75);
+  -webkit-box-shadow: 5px 5px 5px 1px rgba(161, 143, 143, 0.75);
+  -moz-box-shadow: 5px 5px 5px 1px rgba(161, 143, 143, 0.75);
 }
 
 .entree {
-  -webkit-animation: presentation 0.8s linear backwards;
-          animation: presentation 0.8s linear backwards;
+  padding: 10px 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-animation: presentation 0.8s linear forwards;
+          animation: presentation 0.8s linear forwards;
 }
 
 .plat {
-  -webkit-animation: presentation 0.8s 0.8s  linear backwards;
-          animation: presentation 0.8s 0.8s  linear backwards;
+  padding: 10px 0;
+  -webkit-animation: presentation 0.8s 0.8s  linear forwards;
+          animation: presentation 0.8s 0.8s  linear forwards;
 }
 
 .dessert {
-  -webkit-animation: presentation 0.8s 1.5s linear backwards;
-          animation: presentation 0.8s 1.5s linear backwards;
+  padding: 10px 0;
+  -webkit-animation: presentation 0.8s 1.5s linear forwards;
+          animation: presentation 0.8s 1.5s linear forwards;
 }
 
 @-webkit-keyframes presentation {
@@ -238,16 +259,9 @@ main div {
 }
 
 span {
-  line-height: 30px;
   margin-left: 10px;
   font-weight: bold;
   font-size: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 p {
@@ -300,11 +314,16 @@ b {
 
 footer {
   background-color: black;
-  color: white;
   padding-left: 10px;
 }
 
-footer div {
+footer img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  width: 100px;
+}
+
+footer img div {
   color: #e4dcdc;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -312,7 +331,7 @@ footer div {
   margin-left: 5px;
 }
 
-footer div a {
+footer img div a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -325,7 +344,7 @@ footer div a {
   text-decoration: none;
 }
 
-footer div a i {
+footer img div a i {
   opacity: 1;
   color: white;
 }
