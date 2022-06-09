@@ -65,6 +65,29 @@ filter:sepia(40%);
     width: 80%;
     height: auto;
 }
+@mixin coeurs{
+        font-size: 20px;
+        }
+
+       @mixin coeur_solid{
+            margin-left: -20px;
+            position: absolute;
+            opacity: 0;
+            background-image: linear-gradient(#FF79DA,#9356DC);
+            background-clip:text;
+            -webkit-background-clip: text;
+            color:transparent ;
+            &:hover{
+                opacity: 1 ;
+    }
+}
+
+@mixin coeur_regular {
+    font-size: 20px;
+    &:hover{
+    opacity: 0;
+}
+}
 
 @mixin bouton_commander {
     @include bouton_colore;

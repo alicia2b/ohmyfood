@@ -65,8 +65,33 @@ h1 {
   margin: 0;
 }
 
-i {
+.coeurs {
   font-size: 20px;
+  display: -webkit-box;
+  -webkit-box-align: center;
+}
+
+.coeurs .fas {
+  margin-left: -20px;
+  position: absolute;
+  opacity: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.coeurs .fas:hover {
+  opacity: 1;
+}
+
+.coeurs .fas .far {
+  font-size: 20px;
+}
+
+.coeurs .fas .far:hover {
+  opacity: 0;
 }
 
 h2 {

@@ -181,25 +181,16 @@
         padding: 0;
     }
 
-    .coeurs{
-        font-size: 20px;
-        background-clip:text;
-        .fas{
-            margin-left: -20px;
-            position: absolute;
-            opacity: 0;
-            background-image: linear-gradient(#FF79DA,#9356DC);
-            background-clip:text;
-            -webkit-background-clip: text;
-            color:transparent ;
-            &:hover{
-                opacity: 1 ;
-    }
-}
-}
-    .far:hover{
-            opacity: 0;
-        }
+   
+   .coeurs{
+       @include coeurs;
+       .fas{
+           @include coeur_solid;
+           .far{
+               @include coeur_regular;
+           }
+       }
+   }
         
        footer{
            @include footer_mobile;

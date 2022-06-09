@@ -35,9 +35,18 @@ h1{
     font-size: 28px;
     margin: 0;
 }
-i {
-    font-size: 20px;
+.coeurs{
+    @include coeurs;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    .fas{
+        @include coeur_solid;
+        .far{
+            @include coeur_regular;
+        }
+    }
 }
+
 h2{
     color: grey;
     border-bottom: 2px solid #99E2D0 ;

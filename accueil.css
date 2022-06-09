@@ -299,7 +299,11 @@ img {
   opacity: 1;
 }
 
-.far:hover {
+.coeurs .fas .far {
+  font-size: 20px;
+}
+
+.coeurs .fas .far:hover {
   opacity: 0;
 }
 
