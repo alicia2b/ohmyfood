@@ -65,28 +65,39 @@ main div{
 -webkit-box-shadow: 5px 5px 5px 1px rgba(161,143,143,0.75);
 -moz-box-shadow: 5px 5px  5px 1px rgba(161,143,143,0.75);
 }
-.entree{
-    padding: 10px 0;
-   
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+.entrees{
     animation: presentation 0.8s linear forwards;
+    @include text_overflow;
 }
-.plat{
-    padding: 10px 0;
+.plats{
+   @include text_overflow;
     animation: presentation 0.8s 0.8s  linear forwards;
 }
-.dessert{
-    padding: 10px 0;
+.desserts{
     animation: presentation 0.8s 1.5s linear forwards;
+    @include text_overflow;
 }
+
+
 @keyframes presentation {
     from{transform:translateY(-10px);
     }
     to{
         transform: translateY(0);
     }
+}
+
+.entree,.plat,.dessert{
+    padding: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.prix{
+    
+    width: 30px;
+    height: 35px;
+    padding-top: 24px;
 }
 
 .check{
@@ -148,10 +159,7 @@ span{
 p{
     justify-content: space-between;
     margin: 0px;
-    color: grey;
-    display: flex;
     font-size: 14px;
-    font-weight: bold;
     margin-left: 10px;
     white-space:nowrap;
    overflow: hidden;

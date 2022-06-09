@@ -328,6 +328,15 @@ img {
 footer {
   background-color: black;
   padding-left: 10px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px 10px;
 }
 
 footer img {
@@ -336,15 +345,23 @@ footer img {
   width: 100px;
 }
 
-footer img div {
+footer div {
   color: #e4dcdc;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-left: 5px;
 }
 
-footer img div a {
+footer div i {
+  opacity: 1;
+  color: white;
+}
+
+footer div a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -355,11 +372,6 @@ footer img div a {
   margin: 0;
   margin-left: 5px;
   text-decoration: none;
-}
-
-footer img div a i {
-  opacity: 1;
-  color: white;
 }
 
 @media screen and (min-width: 700px) and (max-width: 1024px) {
