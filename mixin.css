@@ -16,32 +16,4 @@
 
 /* */
 /* Footer */
-footer div {
-  color: #e4dcdc;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 5px;
-}
-
-footer div i {
-  opacity: 1;
-  color: white;
-}
-
-footer div a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #e4dcdc;
-  margin: 0;
-  margin-left: 5px;
-  text-decoration: none;
-}
 /*# sourceMappingURL=mixin.css.map */

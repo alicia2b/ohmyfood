@@ -2,7 +2,7 @@
 @import 'mixin.scss';
 
 /*page accueil*/
-/*@media (max-width:700px) */
+
 #loading{
     justify-content: center;
     display: grid;
@@ -177,8 +177,6 @@ i{
         background-color: #99E2D0;
         color:#098b6b ;
         font-weight: bold;
-        width: 60px;
-        height: 20px;
         top: 20px;
         right: 10px;
     }
@@ -186,7 +184,7 @@ i{
 
     .description{
         display: flex;
-        width: 90%;
+        width: 85%;
         padding: 10px 10px;
        
         strong{
@@ -216,92 +214,13 @@ i{
         
        footer{
            @include footer_mobile;
+           img{
+
+        
            @include footer_img;
        }
-        
-    @media screen and (min-width:700px) and (max-width:1024px) {
-        
-    
-    h1+p{
-        font-size: 22px;
-        margin-bottom: 35px;
     }
-    
-    .boutons{
-        align-items: center;
-    }
-    .bouton{
-        @include boutons_bouton_tab;
-    }
-    
-    
-    
-   /* h2{
-        padding: 20px 0;
-        text-align: center;
-    }*/
-    .restaurants{
-        width: 80%;
-        margin-left: 80px; 
-    }
-    .restaurants img{
-        padding: 0 0;
-        height: 240px;
-        width: 100%;
-        object-position: 20% 60%;
-        object-fit: cover;
-    }
-    
-    
-    footer{
-        @include footer_tablette_desk;
-        @include footer_img;
-    }
-    }
-    
-    @media screen and  (min-width:1024px){
-    body{
-        padding: 0 50px;
-        margin:0;
-    }
-    body >img{
-        height: 80px;
-    }
-    .location{
-        font-size: 20px;
-    }
-    #decouverte{
-        margin-top: 40px;
-        width: 300px;
-    }
-    h2{
-        font-size: 30px;
-    }
-    .boutons{
-        align-items: center;
-    display: flex;
-    padding: 0;
-    width: 100%;
-    
-    }
-    .bouton{
-       @include boutons_bouton_desk;
-    }
-    img{
-        height: 350px;
-        object-position: 0% 65%;
-    }
-    span{
-        font-size: 24px;
-    }
-    span+p{
-        font-size: 24px;
-    }
-    
-    footer{
-        @include footer_tablette_desk;
- }
-    }
+
     /*page menu*/
 header{
     @include header_menu;
@@ -397,6 +316,7 @@ main{
     height: 35px;
     padding-top: 27px;
     p{
+        font-weight: bold;
         overflow: visible;
     }
 }
@@ -483,25 +403,85 @@ b{
 
 
 footer{
-    
+    background-color: black;
     @include footer_mobile;
-    @include footer_img;
 }
+    footer img{
+    @include footer_img;
+    }
+
+   footer p{
+        margin-left: 10px;
+       }
+
+       footer div{
+        color:rgb(228, 220, 220);
+        align-items: baseline;
+        display: flex;
+        margin-left: 5px;
+        i{
+            opacity: 1;
+            color: white;
+        
+     a{
+        display: flex;
+        align-items: center;
+            color:rgb(228, 220, 220);
+            margin: 0;
+            margin-left: 5px;
+            text-decoration: none;
+
+         }
+    }
+
+       }
 
 @media screen and (min-width:768px)and (max-width:1024px){
     body{
        @include body_tab_desk;
-       @include footer_img;
+    }
+    h1+p{
+        font-size: 22px;
+        margin-bottom: 35px;
     }
     
-                footer{
-                    @include footer_tablette_desk;
-                    @include footer_img;
-                }
+    .boutons{
+        align-items: center;
+    }
+    .bouton{
+        @include boutons_bouton_tab;
+    }
+    
+    h2{
+        padding: 20px 0;
+        text-align: center;
+    }
+    .restaurants{
+        width: 80%;
+        margin-left: 80px; 
+    }
+    .restaurants img{
+        padding: 0 0;
+        height: 240px;
+        width: 100%;
+        object-position: 20% 60%;
+        object-fit: cover;
+    }
+    
+    footer{
+        @include footer_tablette_desk;
+    }
+    
+    footer img{
+        @include footer_img;
+    }
+    
+}
+              
             
-            }
- @media screen and (min-width:1024px){
+ @media  all and (min-width:1024px) {
      body{
+        padding: 0px 80px;
      @include body_tab_desk;
      }
                 
@@ -514,8 +494,51 @@ footer{
                 object-position: 0% 80%;
                 height: 400px;
             }
+            body{
+                padding: 0 50px;
+                margin:0;
+            }
+            body >img{
+                height: 80px;
+            }
+            .location{
+                font-size: 20px;
+            }
+            #decouverte{
+                margin-top: 40px;
+                width: 300px;
+            }
+            h2{
+                font-size: 30px;
+                padding-left: 0;
+            }
+           
+            .boutons{
+                align-items: center;
+            flex-direction: row;
+            padding: 0;
+            width: 100%;
             
+            }
+            .bouton{
+                width: 30%;
+               @include boutons_bouton_desk;
+            }
 
+        
+            span{
+                font-size: 24px;
+            }
+            span+p{
+                font-size: 24px;
+            }
+            .boutons+h2{
+                background-color:  #f0ebeb;
+                margin: 0;
+                font-size: 30px;
+                padding-left: 50px;
+            }
+    
              h1{
                 font-size: 35px;
                 width: 94%;
@@ -523,32 +546,64 @@ footer{
             h1 i{
                 font-size: 30px;
             }
-            main div{
-                margin-bottom: 25px;
-            }
+           
             .check{
                 margin: 0;
             }
             b{
                 font-size: 25px;
             }
+            .restaurants{
+                flex-flow: row wrap;
+                justify-content: center;
+                
+               
+                
+            }
+            .restau {
+                margin: 20px 20px;
+                width: 45%;
+                align-self: center;
+            
             span{
                 font-size: 25px;
             }
+        
             p{
                 font-size: 20px;
                 padding: 5px 0; 
             }
+        }
             #commander{
                 width: 300px;
                 height: 60px;
                 @include bouton_hover;
             }
+            /* menu*/
+            .entrees,.plats,.desserts{
+                align-items: center;
+                @include colonne;
+            }
+            .carte{
+                margin: 20px 120px;
+                width: 70%;
+            }
+            .entree, .plat, .dessert {
+                width: 300px;
+                p{
+                    font-size: 20px;
+                }
+            }
+            .prix p{
+                font-size: 20px;
+            }
+            
             footer{
-                @include footer_tablette_desk;
+                @include footer_tablette_desk;}
+
              a{
                  text-decoration: none;
                 font-size: 22px;
             }
-        }
-            }
+        }  
+        

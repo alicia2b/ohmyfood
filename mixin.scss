@@ -120,39 +120,23 @@ box-shadow: 5px 5px 5px 1px rgba(161,143,143,0.75);
 }
 /* Footer */
 @mixin footer_mobile{
-        background-color:#000000 ;
+        background-color:black;
         color: white;
-        display: flex;
-        flex-direction: column;
-        padding: 10px 10px;}
+       @include colonne;
+      
+}
         
     @mixin footer_img{    
         margin-left: 10px;
         filter: invert(1);
         width: 130px;
     }
-    footer div{
-            color:rgb(228, 220, 220);
-            align-items: baseline;
-            display: flex;
-            margin-left: 5px;
-            i{
-                opacity: 1;
-                color: white;}
-         a{
-            display: flex;
-            align-items: center;
-                color:rgb(228, 220, 220);
-                margin: 0;
-                margin-left: 5px;
-                text-decoration: none;
-    
-             }
-        }
-
+   
 
    @mixin footer_tablette_desk {    
    flex-direction: row;
+   width: 100%;
+   background-color: black;
     justify-content: space-evenly;
   
    }    
