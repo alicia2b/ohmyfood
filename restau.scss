@@ -1,14 +1,313 @@
 
 @import 'mixin.scss';
 
+/*page accueil*/
+/*@media (max-width:700px) */
+#loading{
+    justify-content: center;
+    display: grid;
+    align-content: center;
+    top: 0;
+     bottom:0;
+     left:0;
+     right: 0;
+    background-color: #ffffff;
+    z-index: 6;
+    opacity: 0.9;
+    position: fixed;
+ animation: loading 3s 0s linear forwards; 
+i{    
+     z-index: 3;
+    font-size: 120px;
+    color: #99E2D0;
+    animation: spinner 2.2s 0s linear forwards; 
+} 
+}
+
+@keyframes loading {
+   
+    100%{
+      visibility: hidden;
+         
+     }
+}
+@keyframes spinner {
+
+   100%{
+        transform: rotate(360deg);
+    }
+}
+#logo_header {
+    justify-content: center;
+    display: flex;
+    img{
+    height: 50px;
+    object-fit: contain;
+    object-position: bottom;
+}
+}
+    #header_accueil{
+        background-color: rgb(219, 211, 211);
+        height: 320px;
+        @include colonne;
+        align-items: center;
+    }
+  
+    
+    .location{
+        color:black;
+        height: 30px;
+        text-align: center;
+        align-items: center;
+        background-color: rgb(196, 189, 189);
+        padding-top: 5px;
+        width: 100%;
+    .location i{
+        padding: 0 10px;
+    }
+    }
+    .slogan{
+        width: 80%;
+        text-align: center;
+        margin: 10px 25px;
+    }
+    .slogan+p{
+        margin: 10px 15px;
+        width: 90%;
+        text-align: center;
+        font:28px;
+        color: rgb(184, 179, 179);
+    }
+
+    h2{ 
+        color:black;
+        margin: 5px 20px;
+        padding-top: 30px;
+    }
+   
+    #decouverte{
+        height: 50px;
+        @include bouton_colore;
+        @include box_shadow;
+        cursor: pointer;
+    &:hover{
+        @include bouton_hover;
+        }
+    }
+    
+    .boutons{ 
+        @include colonne;
+       @include boutons;
+    }
+    
+    .bouton{
+        width: 97%;
+        height: 40px;
+        @include box_shadow;
+      @include boutons_bouton_mobile;
+      &:hover{
+        @include bouton_hover; 
+     }
+    }
+    .bouton span {
+        width: 20px;
+        display: flex;
+        border-radius: 50%;
+        background-color: #9356DC;
+        color: white;
+        align-items: center;
+        justify-content: center;
+        margin-left: -4px;
+     }
+     .bouton div{ 
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+
+    
+    .bouton  p{
+        color: black;
+        text-align: center;
+    }
+    .bouton div i{
+        color:gray;
+        margin-right: 10px;
+    .bouton .fa:nth-child(3){
+        color: #9356DC;
+    }
+}
+ /* carte*/  
+    .restaurants{
+        @include colonne;
+        width: 100%;
+        background-color: rgb(240, 235, 235);  
+        padding-bottom: 60px;
+    }
+    .restau{
+        @include colonne;
+        position: relative;
+        border-radius: 20px;
+        background-color: white;
+        width: 95%;
+        margin: 10px 0;
+        border-radius: 20px;
+        @include box_shadow;
+    
+    a{
+        @include colonne;
+        width: 100%;
+        text-decoration: none;
+        color: black;
+       
+     align-items: flex-start;
+    }
+}
+    .restau img{
+        object-fit: cover;
+        height: 180px;
+        width: 100%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        object-position: 0% 60%;
+    }
+    b{
+        position: absolute;
+        background-color: #99E2D0;
+        color:#098b6b ;
+        font-weight: bold;
+        width: 60px;
+        height: 20px;
+        top: 20px;
+        right: 10px;
+    }
+
+
+    .description{
+        display: flex;
+        width: 90%;
+        padding: 10px 10px;
+       
+        strong{
+            color: black;
+        }
+     p{
+         color:black;
+        width: 100%;
+       margin:0;
+        padding: 0;
+    }
+}
+    
+   .coeurs p{
+       font-size: 15px;
+   }
+   .coeurs{
+    width: 80%;
+       @include coeurs;
+       .fas{
+           @include coeur_solid;
+           .far{
+               @include coeur_regular;
+           }
+       }
+   }
+        
+       footer{
+           @include footer_mobile;
+           @include footer_img;
+       }
+        
+    @media screen and (min-width:700px) and (max-width:1024px) {
+        
+    
+    h1+p{
+        font-size: 22px;
+        margin-bottom: 35px;
+    }
+    
+    .boutons{
+        align-items: center;
+    }
+    .bouton{
+        @include boutons_bouton_tab;
+    }
+    
+    
+    
+   /* h2{
+        padding: 20px 0;
+        text-align: center;
+    }*/
+    .restaurants{
+        width: 80%;
+        margin-left: 80px; 
+    }
+    .restaurants img{
+        padding: 0 0;
+        height: 240px;
+        width: 100%;
+        object-position: 20% 60%;
+        object-fit: cover;
+    }
+    
+    
+    footer{
+        @include footer_tablette_desk;
+        @include footer_img;
+    }
+    }
+    
+    @media screen and  (min-width:1024px){
+    body{
+        padding: 0 50px;
+        margin:0;
+    }
+    body >img{
+        height: 80px;
+    }
+    .location{
+        font-size: 20px;
+    }
+    #decouverte{
+        margin-top: 40px;
+        width: 300px;
+    }
+    h2{
+        font-size: 30px;
+    }
+    .boutons{
+        align-items: center;
+    display: flex;
+    padding: 0;
+    width: 100%;
+    
+    }
+    .bouton{
+       @include boutons_bouton_desk;
+    }
+    img{
+        height: 350px;
+        object-position: 0% 65%;
+    }
+    span{
+        font-size: 24px;
+    }
+    span+p{
+        font-size: 24px;
+    }
+    
+    footer{
+        @include footer_tablette_desk;
+ }
+    }
+    /*page menu*/
 header{
-    @include header;
+    @include header_menu;
 }
 header+img {
-    width: 100%;
-    object-fit: cover;
-    height: 240px;
-    object-position: 0 80%;
+   @include header_menu_img;
 }
 
    body{
@@ -23,15 +322,16 @@ main{
     background-color: rgb(235, 230, 230);
     margin-top: -25px;
     padding: 10px 5px;
-    display: flex;
-    flex-direction: column;
+    @include colonne;
 }
 
-h1{
+.titre_restau{
+    color: black;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     width: 90%;
+    padding: 0 20px;
     font-size: 28px;
     margin: 0;
 }
@@ -47,23 +347,20 @@ h1{
     }
 }
 
-h2{
-    color: grey;
-    border-bottom: 2px solid #99E2D0 ;
-    width: 40px;
+ .categorie_menu{
+        color: grey;
+        border-bottom: 2px solid #99E2D0 ;
+        width: 40px;
 }
-main div{
-    width: 100%;
-}
+
 .carte{
     width:97%;
+    justify-content: space-between;
     background: white;
     border-radius: 10px;
     display: flex;
     margin-bottom: 20px;
-    box-shadow: 5px 5px 5px 1px rgba(161,143,143,0.75);
--webkit-box-shadow: 5px 5px 5px 1px rgba(161,143,143,0.75);
--moz-box-shadow: 5px 5px  5px 1px rgba(161,143,143,0.75);
+    @include box_shadow;
 }
 .entrees{
     animation: presentation 0.8s linear forwards;
@@ -88,16 +385,20 @@ main div{
 }
 
 .entree,.plat,.dessert{
+    width: 250px;
     padding: 10px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
 }
 .prix{
-    
-    width: 30px;
+    width: 80px;
+    direction: rtl;
     height: 35px;
-    padding-top: 24px;
+    padding-top: 27px;
+    p{
+        overflow: visible;
+    }
 }
 
 .check{
@@ -156,7 +457,7 @@ span{
   
     
 }
-p{
+.carte p{
     justify-content: space-between;
     margin: 0px;
     font-size: 14px;
@@ -184,15 +485,18 @@ b{
 footer{
     
     @include footer_mobile;
+    @include footer_img;
 }
 
 @media screen and (min-width:768px)and (max-width:1024px){
     body{
        @include body_tab_desk;
+       @include footer_img;
     }
     
                 footer{
                     @include footer_tablette_desk;
+                    @include footer_img;
                 }
             
             }
@@ -243,6 +547,7 @@ footer{
             footer{
                 @include footer_tablette_desk;
              a{
+                 text-decoration: none;
                 font-size: 22px;
             }
         }

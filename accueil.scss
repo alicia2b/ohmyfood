@@ -82,6 +82,8 @@
    
     #decouverte{
         @include bouton_colore;
+        @include box_shadow;
+
         cursor: pointer;
     &:hover{
         @include bouton_hover;
@@ -90,9 +92,12 @@
 
     button{ 
        @include boutons;
+       @include box_shadow;
+
     }
     
     .bouton{
+        @include box_shadow;
       @include boutons_bouton_mobile;
       &:hover{
         @include bouton_hover; 
@@ -124,12 +129,12 @@
         padding-bottom: 60px;
     }
     .restau{
-       
         background-color: white;
         width: 95%;
         margin-left: 10px;
         margin-bottom: 10px;
         border-radius: 20px;
+        @include box_shadow;
     }
     .description+p{
         margin-left: 10px;
