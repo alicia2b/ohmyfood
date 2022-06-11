@@ -16,35 +16,6 @@
 
 /* */
 /* Footer */
-footer div {
-  color: #e4dcdc;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 5px;
-}
-
-footer div i {
-  opacity: 1;
-  color: white;
-}
-
-footer div a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #e4dcdc;
-  margin: 0;
-  margin-left: 5px;
-  text-decoration: none;
-}
-
 /*@media (max-width:700px) {*/
 header {
   background-color: #dbd3d3;
@@ -335,10 +306,15 @@ img {
 
 .coeurs {
   font-size: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: -60px;
+  position: relative;
+  float: right;
 }
 
 .coeurs .fas {
-  margin-left: -22px;
   position: absolute;
   opacity: 0;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
@@ -355,7 +331,6 @@ img {
 
 .coeurs .fas .far {
   opacity: 1;
-  font-size: 20px;
 }
 
 .coeurs .fas .far:hover {
@@ -368,11 +343,13 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 10px 10px;
 }
 
 @media screen and (min-width: 700px) and (max-width: 1024px) {
@@ -427,6 +404,8 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    width: 100%;
+    background-color: black;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
@@ -489,6 +468,8 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    width: 100%;
+    background-color: black;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;

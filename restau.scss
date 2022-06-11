@@ -2,7 +2,7 @@
 @import 'mixin.scss';
 
 /*page accueil*/
-
+/*format mobile*/
 #loading{
     justify-content: center;
     display: grid;
@@ -49,7 +49,7 @@ i{
     #header_accueil{
         background-color: rgb(219, 211, 211);
         height: 320px;
-        @include colonne;
+        @include colonne-centre;
         align-items: center;
     }
   
@@ -96,7 +96,7 @@ i{
     }
     
     .boutons{ 
-        @include colonne;
+        @include colonne_centre;
        @include boutons;
     }
     
@@ -134,19 +134,21 @@ i{
     .bouton div i{
         color:gray;
         margin-right: 10px;
-    .bouton .fa:nth-child(3){
-        color: #9356DC;
     }
+    .bouton i:nth-child(3){
+        color: #9356DC;
+    
 }
  /* carte*/  
     .restaurants{
-        @include colonne;
+        @include colonne-centre;
         width: 100%;
         background-color: rgb(240, 235, 235);  
         padding-bottom: 60px;
+        padding-top: 20px;
     }
     .restau{
-        @include colonne;
+        @include colonne-start;
         position: relative;
         border-radius: 20px;
         background-color: white;
@@ -154,23 +156,22 @@ i{
         margin: 10px 0;
         border-radius: 20px;
         @include box_shadow;
-    
-    a{
-        @include colonne;
+    }
+     .restau a{
+       
         width: 100%;
         text-decoration: none;
         color: black;
-       
      align-items: flex-start;
-    }
+    
 }
     .restau img{
         object-fit: cover;
-        height: 180px;
+        height: 140px;
         width: 100%;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
-        object-position: 0% 60%;
+        object-position: 0% 50%;
     }
     b{
         position: absolute;
@@ -184,28 +185,26 @@ i{
 
     .description{
         display: flex;
-        width: 85%;
-        padding: 10px 10px;
+        flex-direction: column;
+        width: 50%;
+        padding: 10px 10px;  
        
         strong{
             color: black;
-        }
-     p{
-         color:black;
-        width: 100%;
+        
+    .description p{
        margin:0;
-        padding: 0;
+        padding: 0 ;
     }
 }
-    
-   .coeurs p{
-       font-size: 15px;
-   }
-   .coeurs{
-    width: 80%;
-       @include coeurs;
+}
+   .coeurs_accueil{
+
+       @include coeurs_accueil;
+       margin-right: 40px;
        .fas{
            @include coeur_solid;
+           margin-left: -22px;
            .far{
                @include coeur_regular;
            }
@@ -214,9 +213,9 @@ i{
         
        footer{
            @include footer_mobile;
+
            img{
 
-        
            @include footer_img;
        }
     }
@@ -241,29 +240,31 @@ main{
     background-color: rgb(235, 230, 230);
     margin-top: -25px;
     padding: 10px 5px;
-    @include colonne;
+    @include colonne-centre;
 }
 
 .titre_restau{
-    color: black;
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
-    width: 90%;
-    padding: 0 20px;
-    font-size: 28px;
+    width: 100%;
     margin: 0;
+    p{
+        font-size: 25px;
+        margin: 0;
+    }
 }
-.coeurs{
-    @include coeurs;
-    display: -webkit-box;
-    -webkit-box-align: center;
+    .coeurs_menu{
+    @include coeurs_menu;
+
     .fas{
         @include coeur_solid;
+        margin-left: -22px;
         .far{
             @include coeur_regular;
         }
     }
+
+
 }
 
  .categorie_menu{
@@ -271,7 +272,11 @@ main{
         border-bottom: 2px solid #99E2D0 ;
         width: 40px;
 }
-
+.entrees,.plats,.desserts{
+    @include colonne-start;
+    @include text_overflow;
+    width: 97%;
+}
 .carte{
     width:97%;
     justify-content: space-between;
@@ -283,15 +288,14 @@ main{
 }
 .entrees{
     animation: presentation 0.8s linear forwards;
-    @include text_overflow;
+   
 }
 .plats{
-   @include text_overflow;
+  
     animation: presentation 0.8s 0.8s  linear forwards;
 }
 .desserts{
     animation: presentation 0.8s 1.5s linear forwards;
-    @include text_overflow;
 }
 
 
@@ -305,10 +309,11 @@ main{
 
 .entree,.plat,.dessert{
     width: 250px;
-    padding: 10px;
+    padding: 10px 0;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+
 }
 .prix{
     width: 80px;
@@ -380,7 +385,7 @@ span{
 .carte p{
     justify-content: space-between;
     margin: 0px;
-    font-size: 14px;
+    font-size: 13px;
     margin-left: 10px;
     white-space:nowrap;
    overflow: hidden;
@@ -437,9 +442,19 @@ footer{
        }
 
 @media screen and (min-width:768px)and (max-width:1024px){
+
     body{
        @include body_tab_desk;
     }
+    .titre_restau{
+        width: 85%;
+        p{
+            font-size: 35px;
+        }
+    }
+          
+        
+    
     h1+p{
         font-size: 22px;
         margin-bottom: 35px;
@@ -456,10 +471,8 @@ footer{
         padding: 20px 0;
         text-align: center;
     }
-    .restaurants{
-        width: 80%;
-        margin-left: 80px; 
-    }
+    
+    
     .restaurants img{
         padding: 0 0;
         height: 240px;
@@ -476,30 +489,20 @@ footer{
         @include footer_img;
     }
     
-}
+    }
               
             
  @media  all and (min-width:1024px) {
      body{
-        padding: 0px 80px;
      @include body_tab_desk;
      }
                 
     header img{
         height: 100px;
     }         
-            header+img{
-                        width: 100%;
-                object-fit: cover;
-                object-position: 0% 80%;
-                height: 400px;
-            }
-            body{
-                padding: 0 50px;
-                margin:0;
-            }
-            body >img{
-                height: 80px;
+          
+               body >img{
+                height: 320px;
             }
             .location{
                 font-size: 20px;
@@ -511,6 +514,8 @@ footer{
             h2{
                 font-size: 30px;
                 padding-left: 0;
+                margin: 0;
+               
             }
            
             .boutons{
@@ -532,12 +537,7 @@ footer{
             span+p{
                 font-size: 24px;
             }
-            .boutons+h2{
-                background-color:  #f0ebeb;
-                margin: 0;
-                font-size: 30px;
-                padding-left: 50px;
-            }
+        
     
              h1{
                 font-size: 35px;
@@ -555,25 +555,24 @@ footer{
             }
             .restaurants{
                 flex-flow: row wrap;
-                justify-content: center;
-                
-               
+                justify-content: center; 
                 
             }
             .restau {
                 margin: 20px 20px;
                 width: 45%;
                 align-self: center;
-            
+            }
             span{
                 font-size: 25px;
+            
             }
-        
             p{
                 font-size: 20px;
                 padding: 5px 0; 
-            }
-        }
+             }
+             
+        
             #commander{
                 width: 300px;
                 height: 60px;
@@ -582,28 +581,29 @@ footer{
             /* menu*/
             .entrees,.plats,.desserts{
                 align-items: center;
-                @include colonne;
+                @include colonne-centre;
             }
             .carte{
                 margin: 20px 120px;
                 width: 70%;
             }
-            .entree, .plat, .dessert {
+            .entree,.plat,.dessert {
                 width: 300px;
                 p{
                     font-size: 20px;
                 }
             }
+
             .prix p{
                 font-size: 20px;
             }
             
             footer{
-                @include footer_tablette_desk;}
-
-             a{
+                @include footer_tablette_desk;
+            }
+              footer a{
                  text-decoration: none;
                 font-size: 22px;
             }
         }  
-        
+    

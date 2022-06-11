@@ -17,6 +17,7 @@
 /* */
 /* Footer */
 /*page accueil*/
+/*format mobile*/
 #loading {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -101,6 +102,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  align-items: center;
 }
 
 .location {
@@ -172,11 +174,12 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  display: flex;
-  flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 97%;
   font-size: 14px;
   font-weight: bold;
@@ -252,7 +255,7 @@ h2 {
   margin-right: 10px;
 }
 
-.bouton div i .bouton .fa:nth-child(3) {
+.bouton i:nth-child(3) {
   color: #9356DC;
 }
 
@@ -265,9 +268,13 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   background-color: #f0ebeb;
   padding-bottom: 60px;
+  padding-top: 20px;
 }
 
 .restau {
@@ -278,6 +285,9 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   position: relative;
   border-radius: 20px;
   background-color: white;
@@ -290,13 +300,6 @@ h2 {
 }
 
 .restau a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   width: 100%;
   text-decoration: none;
   color: black;
@@ -308,12 +311,12 @@ h2 {
 .restau img {
   -o-object-fit: cover;
      object-fit: cover;
-  height: 180px;
+  height: 140px;
   width: 100%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  -o-object-position: 0% 60%;
-     object-position: 0% 60%;
+  -o-object-position: 0% 50%;
+     object-position: 0% 50%;
 }
 
 b {
@@ -329,7 +332,11 @@ b {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 85%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
   padding: 10px 10px;
 }
 
@@ -337,24 +344,24 @@ b {
   color: black;
 }
 
-.description p {
-  color: black;
-  width: 100%;
+.description strong .description p {
   margin: 0;
   padding: 0;
 }
 
-.coeurs p {
-  font-size: 15px;
-}
-
-.coeurs {
-  width: 80%;
+.coeurs_accueil {
   font-size: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: -60px;
+  position: relative;
+  float: right;
+  margin-right: -50px;
+  margin-right: 40px;
 }
 
-.coeurs .fas {
-  margin-left: -22px;
+.coeurs_accueil .fas {
   position: absolute;
   opacity: 0;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
@@ -362,19 +369,19 @@ b {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  margin-left: -22px;
 }
 
-.coeurs .fas:hover {
+.coeurs_accueil .fas:hover {
   -webkit-animation: remplissage 1s linear forwards;
           animation: remplissage 1s linear forwards;
 }
 
-.coeurs .fas .far {
+.coeurs_accueil .fas .far {
   opacity: 1;
-  font-size: 20px;
 }
 
-.coeurs .fas .far:hover {
+.coeurs_accueil .fas .far:hover {
   opacity: 0;
 }
 
@@ -384,6 +391,9 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -441,33 +451,32 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .titre_restau {
-  color: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  width: 90%;
-  padding: 0 20px;
-  font-size: 28px;
+  width: 100%;
   margin: 0;
 }
 
-.coeurs {
-  font-size: 22px;
-  display: -webkit-box;
-  -webkit-box-align: center;
+.titre_restau p {
+  font-size: 25px;
+  margin: 0;
 }
 
-.coeurs .fas {
-  margin-left: -22px;
+.coeurs_menu {
+  font-size: 22px;
+}
+
+.coeurs_menu .fas {
   position: absolute;
   opacity: 0;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
@@ -475,19 +484,19 @@ main {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  margin-left: -22px;
 }
 
-.coeurs .fas:hover {
+.coeurs_menu .fas:hover {
   -webkit-animation: remplissage 1s linear forwards;
           animation: remplissage 1s linear forwards;
 }
 
-.coeurs .fas .far {
+.coeurs_menu .fas .far {
   opacity: 1;
-  font-size: 20px;
 }
 
-.coeurs .fas .far:hover {
+.coeurs_menu .fas .far:hover {
   opacity: 0;
 }
 
@@ -495,6 +504,23 @@ main {
   color: grey;
   border-bottom: 2px solid #99E2D0;
   width: 40px;
+}
+
+.entrees, .plats, .desserts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 97%;
 }
 
 .carte {
@@ -516,15 +542,9 @@ main {
 .entrees {
   -webkit-animation: presentation 0.8s linear forwards;
           animation: presentation 0.8s linear forwards;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
 }
 
 .plats {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
   -webkit-animation: presentation 0.8s 0.8s  linear forwards;
           animation: presentation 0.8s 0.8s  linear forwards;
 }
@@ -532,9 +552,6 @@ main {
 .desserts {
   -webkit-animation: presentation 0.8s 1.5s linear forwards;
           animation: presentation 0.8s 1.5s linear forwards;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
 }
 
 @-webkit-keyframes presentation {
@@ -561,7 +578,7 @@ main {
 
 .entree, .plat, .dessert {
   width: 250px;
-  padding: 10px;
+  padding: 10px 0;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -669,7 +686,7 @@ span {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0px;
-  font-size: 14px;
+  font-size: 13px;
   margin-left: 10px;
   white-space: nowrap;
   overflow: hidden;
@@ -712,6 +729,9 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -762,6 +782,12 @@ footer div i a {
   body {
     margin: 0 50px;
   }
+  .titre_restau {
+    width: 85%;
+  }
+  .titre_restau p {
+    font-size: 35px;
+  }
   h1 + p {
     font-size: 22px;
     margin-bottom: 35px;
@@ -787,10 +813,6 @@ footer div i a {
   h2 {
     padding: 20px 0;
     text-align: center;
-  }
-  .restaurants {
-    width: 80%;
-    margin-left: 80px;
   }
   .restaurants img {
     padding: 0 0;
@@ -822,26 +844,13 @@ footer div i a {
 
 @media all and (min-width: 1024px) {
   body {
-    padding: 0px 80px;
     margin: 0 50px;
   }
   header img {
     height: 100px;
   }
-  header + img {
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: 0% 80%;
-       object-position: 0% 80%;
-    height: 400px;
-  }
-  body {
-    padding: 0 50px;
-    margin: 0;
-  }
   body > img {
-    height: 80px;
+    height: 320px;
   }
   .location {
     font-size: 20px;
@@ -853,6 +862,7 @@ footer div i a {
   h2 {
     font-size: 30px;
     padding-left: 0;
+    margin: 0;
   }
   .boutons {
     -webkit-box-align: center;
@@ -880,12 +890,6 @@ footer div i a {
   }
   span + p {
     font-size: 24px;
-  }
-  .boutons + h2 {
-    background-color: #f0ebeb;
-    margin: 0;
-    font-size: 30px;
-    padding-left: 50px;
   }
   h1 {
     font-size: 35px;
@@ -916,10 +920,10 @@ footer div i a {
         -ms-grid-row-align: center;
         align-self: center;
   }
-  .restau span {
+  span {
     font-size: 25px;
   }
-  .restau p {
+  p {
     font-size: 20px;
     padding: 5px 0;
   }
@@ -944,6 +948,7 @@ footer div i a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    align-items: center;
   }
   .carte {
     margin: 20px 120px;
@@ -969,7 +974,7 @@ footer div i a {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
-  a {
+  footer a {
     text-decoration: none;
     font-size: 22px;
   }
