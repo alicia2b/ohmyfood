@@ -90,7 +90,7 @@
 }
 
 #header_accueil {
-  background-color: #dbd3d3;
+  background-color: #ded9e3;
   height: 320px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -401,10 +401,10 @@ footer {
 }
 
 footer img {
-  margin-left: 10px;
   -webkit-filter: invert(1);
           filter: invert(1);
   width: 130px;
+  margin: 10px 20px;
 }
 
 /*page menu*/
@@ -577,7 +577,7 @@ main {
 }
 
 .entree, .plat, .dessert {
-  width: 250px;
+  width: 350px;
   padding: 10px 0;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -675,10 +675,9 @@ main {
   }
 }
 
-span {
+.carte span {
   margin-left: 10px;
   font-weight: bold;
-  font-size: 15px;
 }
 
 .carte p {
@@ -724,7 +723,6 @@ b {
 
 footer {
   background-color: black;
-  background-color: black;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -738,14 +736,28 @@ footer {
           flex-direction: column;
 }
 
+footer a {
+  text-decoration: none;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  margin-left: 5px;
+}
+
 footer img {
-  margin-left: 10px;
   -webkit-filter: invert(1);
           filter: invert(1);
   width: 130px;
+  margin: 10px 20px;
 }
 
 footer p {
+  margin: 0;
   margin-left: 10px;
 }
 
@@ -763,19 +775,6 @@ footer div {
 footer div i {
   opacity: 1;
   color: white;
-}
-
-footer div i a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #e4dcdc;
-  margin: 0;
-  margin-left: 5px;
-  text-decoration: none;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -809,10 +808,14 @@ footer div i a {
     margin-bottom: 20px;
     border-radius: 20px;
     width: 80%;
+    height: 50px;
   }
   h2 {
     padding: 20px 0;
     text-align: center;
+  }
+  .entree, .plat, .dessert {
+    width: 350px;
   }
   .restaurants img {
     padding: 0 0;
@@ -833,12 +836,27 @@ footer div i a {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer a {
+    text-decoration: none;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0;
+    margin-left: 5px;
   }
   footer img {
-    margin-left: 10px;
     -webkit-filter: invert(1);
             filter: invert(1);
     width: 130px;
+    margin: 10px 20px;
   }
 }
 
@@ -920,6 +938,18 @@ footer div i a {
         -ms-grid-row-align: center;
         align-self: center;
   }
+  .plats, .desserts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
   span {
     font-size: 25px;
   }
@@ -954,11 +984,11 @@ footer div i a {
     margin: 20px 120px;
     width: 70%;
   }
-  .entree, .plat, .dessert {
-    width: 300px;
+  .entree span, .plat span, .dessert span {
+    font-size: 22px;
   }
   .entree p, .plat p, .dessert p {
-    font-size: 20px;
+    font-size: 22px;
   }
   .prix p {
     font-size: 20px;
@@ -973,6 +1003,9 @@ footer div i a {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   footer a {
     text-decoration: none;

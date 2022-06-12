@@ -68,6 +68,7 @@ box-shadow: 5px 5px 5px 1px rgba(161,143,143,0.75);
     @mixin boutons_bouton_tab{
         @include boutons_bouton_mobile;
         width: 80%;
+        height: 50px;
     }
 
 @mixin boutons_bouton_desk {
@@ -131,6 +132,14 @@ box-shadow: 5px 5px 5px 1px rgba(161,143,143,0.75);
     @include bouton_colore;
 }
 /* Footer */
+@mixin footer_liens{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin-left: 5px;
+}
 @mixin footer_mobile{
         background-color:black;
         color: white;
@@ -141,9 +150,9 @@ box-shadow: 5px 5px 5px 1px rgba(161,143,143,0.75);
 }
         
     @mixin footer_img{    
-        margin-left: 10px;
         filter: invert(1);
         width: 130px;
+        margin: 10px 20px;
     }
    
 
@@ -152,5 +161,6 @@ box-shadow: 5px 5px 5px 1px rgba(161,143,143,0.75);
    width: 100%;
    background-color: black;
     justify-content: space-evenly;
+    align-items: center;
   
    }    

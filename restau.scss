@@ -47,7 +47,7 @@ i{
 }
 }
     #header_accueil{
-        background-color: rgb(219, 211, 211);
+        background-color: #ded9e3;
         height: 320px;
         @include colonne-centre;
         align-items: center;
@@ -308,7 +308,7 @@ main{
 }
 
 .entree,.plat,.dessert{
-    width: 250px;
+    width: 350px;
     padding: 10px 0;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -375,11 +375,10 @@ main{
 }
 
 
-span{
+.carte span{
     margin-left: 10px;
     font-weight: bold;
-    font-size: 15px;
-  
+   
     
 }
 .carte p{
@@ -408,14 +407,18 @@ b{
 
 
 footer{
-    background-color: black;
+   
     @include footer_mobile;
+    a{
+        @include footer_liens;
+         }
 }
     footer img{
     @include footer_img;
     }
 
    footer p{
+       margin: 0;
         margin-left: 10px;
        }
 
@@ -428,15 +431,7 @@ footer{
             opacity: 1;
             color: white;
         
-     a{
-        display: flex;
-        align-items: center;
-            color:rgb(228, 220, 220);
-            margin: 0;
-            margin-left: 5px;
-            text-decoration: none;
-
-         }
+    
     }
 
        }
@@ -471,7 +466,9 @@ footer{
         padding: 20px 0;
         text-align: center;
     }
-    
+    .entree,.plat,.dessert{
+        width: 350px;
+    }
     
     .restaurants img{
         padding: 0 0;
@@ -483,7 +480,10 @@ footer{
     
     footer{
         @include footer_tablette_desk;
+        a{
+        @include footer_liens;
     }
+}
     
     footer img{
         @include footer_img;
@@ -563,6 +563,9 @@ footer{
                 width: 45%;
                 align-self: center;
             }
+            .plats,.desserts{
+                @include colonne-start;
+            }
             span{
                 font-size: 25px;
             
@@ -588,9 +591,11 @@ footer{
                 width: 70%;
             }
             .entree,.plat,.dessert {
-                width: 300px;
+                span{
+                    font-size: 22px;
+                }
                 p{
-                    font-size: 20px;
+                    font-size: 22px;
                 }
             }
 
