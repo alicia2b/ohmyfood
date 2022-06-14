@@ -93,10 +93,8 @@ box-shadow: 5px 5px 5px 1px rgba(161,143,143,0.75);
 @mixin coeurs_accueil{
         font-size: 22px;
         display: flex;
-        top: -60px;
         position: relative;
-        float: right;
-        margin-right: -50px;
+        margin-right: 20px;
         }
         @mixin coeurs_menu{
             font-size: 22px;

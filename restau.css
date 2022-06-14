@@ -319,13 +319,29 @@ h2 {
      object-position: 0% 50%;
 }
 
-b {
+.restau span {
   position: absolute;
   background-color: #99E2D0;
   color: #098b6b;
   font-weight: bold;
   top: 20px;
   right: 10px;
+  padding: 4px 5px;
+}
+
+.description_coeurs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+  padding: 10px 10px;
 }
 
 .description {
@@ -354,11 +370,8 @@ b {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  top: -60px;
   position: relative;
-  float: right;
-  margin-right: -50px;
-  margin-right: 40px;
+  margin-right: 20px;
 }
 
 .coeurs_accueil .fas {
@@ -369,7 +382,6 @@ b {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  margin-left: -22px;
 }
 
 .coeurs_accueil .fas:hover {
