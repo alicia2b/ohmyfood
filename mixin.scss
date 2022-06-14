@@ -56,6 +56,8 @@ box-shadow: 5px 5px 5px 1px rgba(161,143,143,0.75);
 -webkit-box-shadow: 5px 5px 5px 1px rgba(161,143,143,0.75);
 -moz-box-shadow: 5px 5px  5px 1px rgba(161,143,143,0.75);
   transform: scale(1.05);
+   lighting-color:#FF79DA;
+   
 }
 @mixin boutons_bouton_mobile {
    align-items: center; 

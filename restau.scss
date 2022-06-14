@@ -58,11 +58,14 @@ i{
         color:black;
         height: 30px;
         text-align: center;
+        display: flex;
+    justify-content: center;
         align-items: center;
         background-color: rgb(196, 189, 189);
         padding-top: 5px;
         width: 100%;
-    .location i{
+    .location>i{
+        font-size: 17px;
         padding: 0 10px;
     }
     }
@@ -75,8 +78,9 @@ i{
         margin: 10px 15px;
         width: 90%;
         text-align: center;
-        font:28px;
-        color: rgb(184, 179, 179);
+        font-size:21px;
+        font-weight: bold;
+        color:  rgb(196, 189, 189);
     }
 
     h2{ 
@@ -92,6 +96,7 @@ i{
         cursor: pointer;
     &:hover{
         @include bouton_hover;
+        filter: contrast(1.6)
         }
     }
     
@@ -107,6 +112,7 @@ i{
       @include boutons_bouton_mobile;
       &:hover{
         @include bouton_hover; 
+        filter: contrast(1.6)
      }
     }
     .bouton span {
@@ -135,11 +141,19 @@ i{
         color:gray;
         margin-right: 10px;
     }
-    .bouton i:nth-child(3){
+    .bouton .fa-solid{
+        background-image:#9356DC;
+        background-clip: text;
         color: #9356DC;
-    
-}
+        
+
+    }
+
  /* carte*/  
+ header i{
+    font-size: 25px;
+    padding: 10px;
+ }
     .restaurants{
         @include colonne-centre;
         width: 100%;
@@ -201,8 +215,9 @@ i{
             color: black;
         
     .description p{
-       margin:0;
-        padding: 0 ;
+       
+        padding: 0px 10px;
+            margin: 0;
     }
 }
 }
@@ -253,7 +268,7 @@ main{
 .titre_restau{
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 90%;
     margin: 0;
     p{
         font-size: 25px;
@@ -270,9 +285,10 @@ main{
             @include coeur_regular;
         }
     }
-
-
 }
+h2,h3,h4{
+    font-size: 30px;
+   }
 
  .categorie_menu{
         color: grey;
@@ -409,6 +425,7 @@ b{
     @include bouton_commander;
     &:hover{
         @include bouton_hover;
+        filter: contrast(1.6)
     }
 }
 
@@ -505,7 +522,7 @@ footer{
      }
                 
     header img{
-        height: 100px;
+        height: 70px;
     }         
           
                body >img{
@@ -553,7 +570,7 @@ footer{
             h1 i{
                 font-size: 30px;
             }
-           
+          
             .check{
                 margin: 0;
             }
@@ -577,10 +594,7 @@ footer{
                 font-size: 25px;
             
             }
-            p{
-                font-size: 20px;
-                padding: 5px 0; 
-             }
+          
              
         
             #commander{
