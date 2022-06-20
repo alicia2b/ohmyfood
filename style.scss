@@ -524,6 +524,10 @@ footer{
     header img{
         height: 70px;
     }         
+
+    header+img{
+        object-position: 0 60%;
+    }
           
                body >img{
                 height: 320px;
