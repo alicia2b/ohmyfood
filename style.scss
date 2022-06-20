@@ -124,6 +124,7 @@ i{
         align-items: center;
         justify-content: center;
         margin-left: -4px;
+        height: 20px;
      }
      .bouton div{ 
         flex: 1;
@@ -131,7 +132,9 @@ i{
         justify-content: center;
         align-items: center;
      }
-
+     #bouton_1{
+        margin-left: 5px;
+     }
     
     .bouton  p{
         color: black;
@@ -221,9 +224,9 @@ i{
     }
 }
 }
-   .coeurs_accueil{
+   .coeurs{
 
-       @include coeurs_accueil;
+       @include coeurs;
        .fas{
            @include coeur_solid;
            
@@ -275,17 +278,16 @@ main{
         margin: 0;
     }
 }
-    .coeurs_menu{
-    @include coeurs_menu;
+   
 
     .fas{
         @include coeur_solid;
-        margin-left: -22px;
+        
         .far{
             @include coeur_regular;
         }
     }
-}
+
 h2,h3,h4{
     font-size: 30px;
    }
