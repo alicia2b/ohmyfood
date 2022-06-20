@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AA4FA,uBAAuB;AA+BvB,UAAU,CAAV,WAAU;EACN,EAAE;IACE,OAAO,EAAE,CAAE;IACX,gBAAgB,EAAE,MAAM;;;;AAGhC,KAAK;AAIL,YAAY",
-    "sources": [
-        "mixin.scss"
-    ],
-    "names": [],
-    "file": "mixin.css"
-}
+{"version":3,"sources":["mixin.scss","mixin.css"],"names":[],"mappings":"AA4FA,sBAAA;AA+BA;EACI;IACI,UAAA;IACA,wBAAA;ECzHN;AACF;ADqHA;EACI;IACI,UAAA;IACA,wBAAA;ECzHN;AACF;AD2HA,IAAA;AAIA,WAAA","file":"mixin.css"}
