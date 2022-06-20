@@ -115,6 +115,7 @@ i{
     }
     .bouton span {
         width: 20px;
+        height: 20px;
         display: flex;
         border-radius: 50%;
         background-color: #9356DC;
@@ -122,7 +123,7 @@ i{
         align-items: center;
         justify-content: center;
         margin-left: -4px;
-        height: 20px;
+       
      }
      .bouton div{ 
         flex: 1;
@@ -563,8 +564,10 @@ footer{
             }
 
         
-            span{
-                font-size: 24px;
+            .bouton span{
+                font-size: 20px;
+                height: 25px;
+                width: 25px;
             }
             span+p{
                 font-size: 24px;
@@ -594,6 +597,10 @@ footer{
                 margin: 20px 20px;
                 width: 45%;
                 align-self: center;
+                img{
+                    height: 180px;
+                }
+              
             }
             .plats,.desserts{
                 @include colonne-start;
