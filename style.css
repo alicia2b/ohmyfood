@@ -81,7 +81,6 @@
 }
 
 .location {
-  color: black;
   height: 30px;
   text-align: center;
   display: flex;
@@ -90,10 +89,6 @@
   background-color: rgb(196, 189, 189);
   padding-top: 5px;
   width: 100%;
-}
-.location .location > i {
-  font-size: 17px;
-  padding: 0 10px;
 }
 
 .slogan {
@@ -208,6 +203,8 @@ h2 {
 .bouton div i {
   color: gray;
   margin-right: 10px;
+  opacity: 1;
+  position: relative;
 }
 
 .bouton .fa-solid {
@@ -307,7 +304,7 @@ header i {
   cursor: pointer;
   font-size: 22px;
 }
-.coeurs .fas {
+.coeurs .coeurs.fas {
   position: absolute;
   opacity: 0;
   background-image: linear-gradient(#FF79DA, #9356DC);
@@ -315,14 +312,14 @@ header i {
   -webkit-background-clip: text;
   color: transparent;
 }
-.coeurs .fas:hover {
+.coeurs .coeurs.fas:hover {
   -webkit-animation: remplissage 1s linear forwards;
           animation: remplissage 1s linear forwards;
 }
-.coeurs .fas .far {
+.coeurs .coeurs.fas .far {
   opacity: 1;
 }
-.coeurs .fas .far:hover {
+.coeurs .coeurs.fas .far:hover {
   opacity: 0;
 }
 
@@ -387,7 +384,7 @@ main {
   margin: 0;
 }
 
-.fas {
+.coeurs > .fas {
   position: absolute;
   opacity: 0;
   background-image: linear-gradient(#FF79DA, #9356DC);
@@ -395,14 +392,14 @@ main {
   -webkit-background-clip: text;
   color: transparent;
 }
-.fas:hover {
+.coeurs > .fas:hover {
   -webkit-animation: remplissage 1s linear forwards;
           animation: remplissage 1s linear forwards;
 }
-.fas .far {
+.coeurs > .fas .coeurs.far {
   opacity: 1;
 }
-.fas .far:hover {
+.coeurs > .fas .coeurs.far:hover {
   opacity: 0;
 }
 

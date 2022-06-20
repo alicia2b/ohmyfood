@@ -55,7 +55,7 @@ i{
   
     
     .location{
-        color:black;
+        
         height: 30px;
         text-align: center;
         display: flex;
@@ -64,11 +64,9 @@ i{
         background-color: rgb(196, 189, 189);
         padding-top: 5px;
         width: 100%;
-    .location>i{
-        font-size: 17px;
-        padding: 0 10px;
+        
     }
-    }
+    
     .slogan{
         width: 80%;
         text-align: center;
@@ -143,6 +141,8 @@ i{
     .bouton div i{
         color:gray;
         margin-right: 10px;
+        opacity: 1;
+        position:relative;
     }
     .bouton .fa-solid{
         background-image:#9356DC;
@@ -227,7 +227,7 @@ i{
    .coeurs{
 
        @include coeurs;
-       .fas{
+       .coeurs.fas{
            @include coeur_solid;
            
            .far{
@@ -280,10 +280,10 @@ main{
 }
    
 
-    .fas{
+    .coeurs>.fas{
         @include coeur_solid;
         
-        .far{
+        .coeurs.far{
             @include coeur_regular;
         }
     }
@@ -536,7 +536,9 @@ footer{
             }
             .location{
                 font-size: 20px;
-            }
+                    }
+                
+            
             #decouverte{
                 margin-top: 40px;
                 width: 300px;
