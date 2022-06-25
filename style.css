@@ -411,6 +411,8 @@ h2, h3, h4 {
   color: grey;
   border-bottom: 2px solid #99E2D0;
   width: 40px;
+  padding: 0;
+  margin: 20px;
 }
 
 .entrees, .plats, .desserts {
@@ -468,7 +470,7 @@ h2, h3, h4 {
   }
 }
 .entree, .plat, .dessert {
-  width: 350px;
+  width: 380px;
   padding: 10px 0;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -557,7 +559,7 @@ h2, h3, h4 {
 .carte p {
   justify-content: space-between;
   margin: 0px;
-  font-size: 13px;
+  font-size: 15px;
   margin-left: 10px;
   white-space: nowrap;
   overflow: hidden;
@@ -666,7 +668,7 @@ footer div i {
   }
 
   .entree, .plat, .dessert {
-    width: 350px;
+    width: 380px;
   }
 
   .restaurants img {

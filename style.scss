@@ -336,7 +336,7 @@ h2,h3,h4{
 }
 
 .entree,.plat,.dessert{
-    width: 370px;
+    width: 380px;
     padding: 10px 0;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -412,7 +412,7 @@ h2,h3,h4{
 .carte p{
     justify-content: space-between;
     margin: 0px;
-    font-size: 13px;
+    font-size: 15px;
     margin-left: 10px;
     white-space:nowrap;
    overflow: hidden;
@@ -496,7 +496,7 @@ footer{
         text-align: center;
     }
     .entree,.plat,.dessert{
-        width: 350px;
+        width: 380px;
     }
     
     .restaurants img{
