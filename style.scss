@@ -297,6 +297,8 @@ h2,h3,h4{
         color: grey;
         border-bottom: 2px solid #99E2D0 ;
         width: 40px;
+        padding: 0;
+        margin: 20px;
 }
 .entrees,.plats,.desserts{
     @include colonne-start;
@@ -334,7 +336,7 @@ h2,h3,h4{
 }
 
 .entree,.plat,.dessert{
-    width: 350px;
+    width: 370px;
     padding: 10px 0;
     white-space: nowrap;
     text-overflow: ellipsis;
