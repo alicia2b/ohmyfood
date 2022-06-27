@@ -66,7 +66,7 @@ i{
 }
     #header_accueil{
         background-color: #ded9e3;
-        height: 320px;
+        height: 330px;
         @include colonne-centre;
         align-items: center;
     }
@@ -89,7 +89,7 @@ i{
     }
     
     .slogan{
-        
+        margin-bottom: 0;
         text-align: center;
       
     }
@@ -97,7 +97,7 @@ i{
         margin: 10px 14px;
         width: 90%;
         text-align: center;
-        font-size:21px;
+        font-size:15px;
         color: rgb(90, 87, 87);
     }
 
@@ -112,6 +112,7 @@ i{
         @include bouton_colore;
         @include box_shadow;
         cursor: pointer;
+        margin-top: 20px;   
     &:hover{
         @include bouton_hover;
         filter: contrast(1.6)

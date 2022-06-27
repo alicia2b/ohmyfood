@@ -91,7 +91,7 @@ header a i {
 
 #header_accueil {
   background-color: #ded9e3;
-  height: 320px;
+  height: 330px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -113,6 +113,7 @@ header a i {
 }
 
 .slogan {
+  margin-bottom: 0;
   text-align: center;
 }
 
@@ -120,7 +121,7 @@ header a i {
   margin: 10px 14px;
   width: 90%;
   text-align: center;
-  font-size: 21px;
+  font-size: 15px;
   color: rgb(90, 87, 87);
 }
 
@@ -143,6 +144,7 @@ h2 {
   -webkit-box-shadow: 5px 5px 5px 1px rgba(161, 143, 143, 0.75);
   -moz-box-shadow: 5px 5px 5px 1px rgba(161, 143, 143, 0.75);
   cursor: pointer;
+  margin-top: 20px;
 }
 #decouverte:hover {
   box-shadow: 5px 5px 5px 1px rgba(161, 143, 143, 0.75);
