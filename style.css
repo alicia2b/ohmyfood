@@ -19,7 +19,7 @@ body {
           animation: transition 1.5s 0s linear forwards;
 }
 
-h2, h3 {
+.logo_header img {
   font-family: "Shrikhand", cursive;
 }
 
@@ -127,8 +127,7 @@ header a i {
 
 h2 {
   color: black;
-  margin: 5px 20px;
-  padding-top: 30px;
+  margin: 20px 10px;
 }
 
 #decouverte {
