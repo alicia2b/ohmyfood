@@ -114,7 +114,6 @@ header a i {
 
 .slogan {
   text-align: center;
-  margin: 10px 25px;
 }
 
 .slogan + p {
@@ -392,10 +391,10 @@ main {
   display: flex;
   justify-content: space-between;
   width: 90%;
-  margin: 0;
 }
 .titre_restau p {
-  font-size: 25px;
+  font-family: "Shrikhand", "cursive";
+  font-size: 22px;
   margin: 0;
 }
 
@@ -427,7 +426,7 @@ h2, h3, h4 {
   border-bottom: 2px solid #99E2D0;
   width: 40px;
   padding: 0;
-  margin: 20px;
+  margin: 20px 0;
 }
 
 .entrees, .plats, .desserts {
