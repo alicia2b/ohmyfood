@@ -15,6 +15,13 @@
 /* Footer */
 /*page accueil*/
 /*format mobile*/
+header a {
+  padding: 0;
+}
+header a i {
+  padding: 0;
+}
+
 #loading {
   justify-content: center;
   display: grid;
